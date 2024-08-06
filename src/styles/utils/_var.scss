@@ -1,0 +1,40 @@
+@import './fonts';
+
+// colors
+$primary-color: #000; // Color Primario
+$secondary-color: #fff; // Color Secundario
+
+$white: #fff;
+$black: #000;
+$grey: hsl(0, 0%, 86%);
+$dark-Gray: hsl(0, 0%, 55%);
+$very-Dark-Gray: hsl(0, 0%, 41%);
+
+// Font Size
+$base-font-size: .9375rem; // Parrafos
+$small-font-size: 0.875rem; // Texto Pequeno
+$headlines-font-size: 3.5rem; // Titulo Principal
+$sub-headlines-font-size: 1.75rem; // Sub Titulo
+$headlines-XL-font-size: 4.375rem; // Fuente Display
+
+
+// Spacing
+$gap-normal: .3125rem;
+$title-letter-spacing: .0813rem;
+
+
+// Fonts Family
+$font-paragraph: 'Alata-Regular', sans-serif;
+$font-headings: 'JosefinSans-VariableFont_wght', sans-serif;
+
+
+// Fonts Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+
+// Breakpoints
+$mobile-bp: 375px;
+$tablet-bp: 768px;
+$desktop-bp: 1440px;
