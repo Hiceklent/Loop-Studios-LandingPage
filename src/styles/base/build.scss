@@ -1,19 +1,31 @@
 @import '../utils/var';
 
 html{
-    font-family:$font-paragraph;
-    font-size: $base-font-size;
+    font-family:$font-family-base;
+    font-size: $font-size-base;
     font-weight: $font-weight-normal;
+    line-height: $line-height-base;
+ 
+    
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family:$font-family-headings;
+    font-weight: $font-weight-light;
 }
 
 h1,h2{
-    font-family:$font-headings;
-    font-size: $headlines-font-size;
-    font-weight: $font-weight-light;
-    letter-spacing: $title-letter-spacing;
+    font-size: $font-size-headlines;
+}
+
+h3 {
+    font-size: $font-size-sub-headlines;
 }
 
 body {
     min-height: 100vh;
-    text-transform: capitalize;
+}
+
+p {
+    color: $-dark-Gray;
 }
