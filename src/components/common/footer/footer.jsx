@@ -3,7 +3,7 @@ import "./footer.scss";
 const Footer = () => {
      return (
           <>
-               <footer>hohla perras</footer>
+               <footer>hola perras</footer>
           </>
      );
 };
