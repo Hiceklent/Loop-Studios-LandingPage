@@ -7,7 +7,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: $background-image no-repeat center center/cover;
     color: $primary-color;
     font-family: $font-family;
 
@@ -49,6 +48,9 @@ header {
 @media (max-width: 768px) {
     header {
         flex-direction: row;
+        background-image: url(/src/assets/images/mobile/image-hero.jpg);
+        background-size: auto;
+        background-position: initial;
 
         .logo {
             margin-bottom: 10px;
@@ -78,6 +80,9 @@ header {
     header {
       flex-direction: row;
       justify-content: space-between;
+      background-image: url(/src/assets/images/desktop/image-hero.jpg);
+      background-size: cover;
+      background-position: initial;
       align-items: center;
       padding: 25px 50px;
   
