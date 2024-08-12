@@ -1,10 +1,8 @@
-import "./footer.scss";
+import "./Footer.scss";
 
 const Footer = () => {
      return (
-          <>
-               <footer>hohla perras</footer>
-          </>
+               <footer>Aqui va el footer</footer>
      );
 };
 
