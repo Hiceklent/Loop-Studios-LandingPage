@@ -1,0 +1,47 @@
+.section-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 37.5rem;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+ 
+    
+    h1 {
+        text-align: center;
+        border: 1px solid #fff;
+        font-size: 3.5rem;
+        width: 600px;
+        line-height: 3.75rem;
+        font-weight: 200;
+
+    }   
+
+    @media (max-width: 768px) {
+        height: 300px;
+
+        h1 {
+            line-height: 2.60rem;
+            width: 250px;
+            font-size: 2rem;
+        }
+
+    }
+
+    @media (max-width: 375px) {
+        height: 200px;
+
+
+        h1 {
+            line-height: 2.55rem;
+            text-align: left;
+            width: 200px;
+            font-size: 1.5rem;
+        }
+
+       
+    }
+}

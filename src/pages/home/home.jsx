@@ -1,12 +1,20 @@
-import './home.scss'
+import React from 'react';
+import './Home.scss';
+import SectionSecondary from '../../components/main/SectionSecondary/SectionSecondary';
+import SectionPrimary from '../../components/main/SectionPrimary/SectionPrimary';
 
 const Home = () => {
+
     return (
-         <> 
-              <main>
-                este es el main
-              </main>
-         </>
+        <>
+
+            <main>
+                
+                    <SectionPrimary />
+                    <SectionSecondary />
+                
+            </main>
+        </>
     );
 };
 
