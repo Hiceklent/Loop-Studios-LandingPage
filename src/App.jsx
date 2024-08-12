@@ -1,5 +1,5 @@
-import Footer from './components/common/footer/footer'
-import Header from './components/common/header/header'
+import Footer from './components/common/footer/Footer'
+import Header from './components/common/header/Header'
 import Home from './pages/home/home'
 
 function App() {

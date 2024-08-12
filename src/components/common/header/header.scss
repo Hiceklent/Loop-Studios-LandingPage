@@ -1,5 +1,5 @@
 $primary-color: #fff;
-$background-image: url('/src/assets/images/mobile/image-hero.jpg');
+$second-color: #000;
 $font-family: 'Josefin Sans', sans-serif;
 
 @mixin hover-effect($color, $hover-color, $hover-border-color) {
@@ -27,7 +27,7 @@ $font-family: 'Josefin Sans', sans-serif;
 Header {
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: $second-color;
     align-items: center;
     padding: 20px;
     color: $primary-color;
