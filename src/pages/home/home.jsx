@@ -1,10 +1,11 @@
 import './home.scss'
+import OurCreationsGalery from '../../components/OurCreationGalery/OurCreationsGalery'
 
 const Home = () => {
     return (
          <> 
               <main>
-                este es el main
+                <OurCreationsGalery/>
               </main>
          </>
     );
