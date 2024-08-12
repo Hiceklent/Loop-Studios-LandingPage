@@ -1,6 +1,6 @@
-import './header.scss'
+import './Header.scss'
 
-const header = () => {
+const Header = () => {
   return (
     <>
       <header className="header">
