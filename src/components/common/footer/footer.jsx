@@ -8,22 +8,22 @@ const Footer = () => {
   return (
     <footer>
       <div className="logo">loopstudios</div>
-      <nav>
+      <nav className="footer-nav">
         <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Careers</a></li>
-          <li><a href="">Events</a></li>
-          <li><a href="">Products</a></li>
-          <li><a href="">Support</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Support</a></li>
         </ul>
       </nav>
-      <div className="footer-social">
-        <div className="social-icons">
-          <img src='/src/assets/icons/icon-facebook.svg' alt="Facebook" />
-          <img src={TwitterIcon} alt="Twitter" />
-          <img src={PinterestIcon} alt="Pinterest" />
-          <img src={InstagramIcon} alt="Instagram" />
-        </div>
+      <div className="footer-right">
+        <ul className="social-icons">
+          <li><a href="#"><img src={FacebookIcon} alt="Facebook" /></a></li>
+          <li><a href="#"><img src={TwitterIcon} alt="Twitter" /></a></li>
+          <li><a href="#"><img src={PinterestIcon} alt="Pinterest" /></a></li>
+          <li><a href="#"><img src={InstagramIcon} alt="Instagram" /></a></li>
+        </ul>
       </div>
       <p className="footer-bottom"> &copy; 2023 Loopstudios. All rights reserved.</p>
     </footer>
