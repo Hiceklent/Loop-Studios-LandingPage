@@ -4,27 +4,30 @@ html{
     font-family:$font-family-base;
     font-size: $font-size-base;
     font-weight: $font-weight-normal;
-    line-height: $line-height-base;
- 
     
+}
+
+#loopStudiosAPP {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
 }
 
 h1,h2,h3,h4,h5,h6{
     font-family:$font-family-headings;
-    font-weight: $font-weight-light;
+    text-transform: uppercase;
 }
 
 h1,h2{
     font-size: $font-size-headlines;
+    font-weight: $font-weight-light;
 }
 
 h3 {
     font-size: $font-size-sub-headlines;
+    font-weight: $font-weight-thin;
 }
 
-body {
-    min-height: 100vh;
-}
 
 p {
     color: $-dark-Gray;

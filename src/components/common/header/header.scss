@@ -1,42 +1,22 @@
-$primary-color: #fff;
-$background-image: url('/src/assets/images/mobile/image-hero.jpg');
-$font-family: 'Josefin Sans', sans-serif;
-
-@mixin hover-effect($color, $hover-color, $hover-border-color) {
-    color: $color;
-    position: relative;
-  
-    &:hover {
-      color: $hover-color;
-  
-      &::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -2px;
-        width: 100%;
-        height: 2px;
-        background-color: $hover-border-color;
-        transition: width 0.3s ease;
-        width: 100%;
-        border-radius: 10px;
-      }
-    }
-  }
+@import '../../../styles/utils/_var.scss';
+@import '../../../styles/utils/_mixins.scss';
 
 Header {
     display: flex;
     justify-content: space-between;
     background-color: black;
     align-items: center;
-    padding: 20px;
-    color: $primary-color;
-    font-family: $font-family;
+    padding: 0 20px;
+    color: $-white;
+    position: absolute;
+    top: 0;
+    height: $nav-height;
+    width: 100%;
+    z-index: 10;
 
     .logo {
-        font-size: 34px;
+        font-size: $font-size-logo;
         font-weight: bold;
-        font-family: $font-family;
     }
 
     nav {
@@ -51,10 +31,9 @@ Header {
 
                 a {
                     text-decoration: none;
-                    color: $primary-color;
+                    color: $-offWhite;
                     font-size: 14px;
-
-                     @include hover-effect($primary-color, lighten($primary-color, 20%), #fff);
+                    @include hover-effect($-white,80%);
                 }
             }
         }
@@ -62,6 +41,18 @@ Header {
         button {
             background-color: transparent;
             border: none;
+        }
+
+        &.open ul {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%; 
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
         }
     }
 }
@@ -86,6 +77,11 @@ Header {
             }
         }
 
+        nav.open ul {
+            display: flex; // Muestra el menú cuando está abierto
+            height: 100%;
+        }
+
         button {
             display: block;
             background-color: transparent;
@@ -96,34 +92,33 @@ Header {
 
 @media (min-width: 767px) and (max-width: 1440px) {
     header {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 25px 50px;
-  
-      .logo {
-        font-size: 32px;
-        margin-bottom: 0;
-      }
-  
-      nav {
-        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-  
-        ul {
-          display: flex;
-          flex-direction: row;
-          gap: 30px;
-          position: static;
-          background: none; 
-          padding: 0; 
-          width: auto; 
+        padding: 0 50px;
+
+        .logo {
+            font-size: 32px;
+            margin-bottom: 0;
         }
-  
-        button {
-          display: none ;
+
+        nav {
+            display: flex;
+            align-items: center;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+                position: static;
+                background: none;
+                padding: 0;
+                width: auto;
+            }
+
+            button {
+                display: none;
+            }
         }
-      }
     }
-  }
-  
+}
