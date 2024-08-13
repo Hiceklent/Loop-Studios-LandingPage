@@ -1,0 +1,103 @@
+@import '../../styles/utils/var';
+@import '../../styles/utils/mixins';
+
+.oc-galery {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    @include paddings-bottom-top();
+    
+
+    &__wrap{
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        overflow: hidden;
+        align-items: center;
+
+        @media (min-width:  $bp-tablet) {
+            align-items: flex-start;
+        }
+
+
+    }
+
+    &__title {
+        
+        padding-bottom: 1.125em + $gap-base;
+        width: fit-content;
+        font-size: $font-size-sub-headlines;
+
+        @media (min-width:  $bp-tablet) {
+            order: 1;
+            font-size: $font-family-headings;
+        }
+    }
+
+    &__card-container {
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%,200px), 256px)); /* Una columna ajustable */
+        grid-template-rows: repeat(7, auto);
+        gap: $gap-grid-base;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: $padding-main;
+        
+    }
+ 
+    @media screen and (min-width: $bp-tablet) {
+        &__card-container {
+            grid-template-columns: repeat(4, minmax(min(100%,100px), 256px));
+            grid-template-rows: repeat(2, auto);
+            order: 3;
+        } /* Una columna ajustable */
+    }
+
+    &__card{
+        color: $-white;
+        text-decoration: none;
+        background-color: $-dark-Gray;
+        width: 100%;
+        display: flex;
+        @include cards-hover-effect();
+        
+
+        & picture {
+
+            & img, source {
+                height: 100%;
+                object-position: center;
+                object-fit: contain;
+                width: 100%;
+            }
+
+
+        }
+        
+        
+        & h3 {
+            position: absolute;
+            z-index: 3;
+            bottom: 0;
+            left: 0;
+            text-align: start;
+            padding: 0 0 5% 5%;
+        }
+    }
+
+    &__seeAll {
+        letter-spacing: $letter-spacing-base;
+        text-decoration: none;
+        font-size: $font-size-large;
+        @include buttons(12);
+
+        @media (min-width:  $bp-tablet) {
+            align-self: flex-end;
+            order: 2;
+            position: absolute;
+            // Alineación vertical centrada
+          }
+    }
+}

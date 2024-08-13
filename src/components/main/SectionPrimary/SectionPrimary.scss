@@ -1,24 +1,24 @@
 .section-background {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: end;
     height: 100vh;   
     background-size: cover;
     background-position: center;
     color: white;
-    text-align: center;
-    padding: 20px;
     width: 100%;
     background-image: url('../../../assets/images/desktop/image-hero.jpg');
  
     
     h1 {
-        text-align: center;
         border: 1px solid #fff;
         font-size: 3.5rem;
-        width: 600px;
+        width: 500px;
         line-height: 3.75rem;
         font-weight: 200;
+        padding: 20px 40px;
+        margin: 0 0 50px 50px;
+        white-space: wrap;
+        
 
     }   
 
