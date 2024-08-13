@@ -19,7 +19,7 @@ const Footer = () => {
       </nav>
       <div className="footer-social">
         <div className="social-icons">
-          <img src='/src/assets/icons/icon-facebook.svg' alt="Facebook" />
+          <img src={FacebookIcon} alt="Facebook" />
           <img src={TwitterIcon} alt="Twitter" />
           <img src={PinterestIcon} alt="Pinterest" />
           <img src={InstagramIcon} alt="Instagram" />
