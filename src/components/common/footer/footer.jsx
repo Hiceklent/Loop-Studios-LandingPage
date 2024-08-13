@@ -7,6 +7,7 @@ import InstagramIcon from '../../../assets/icons/icon-Instagram.svg';
 const Footer = () => {
   return (
     <footer>
+      <div className="footer-left">
       <div className="logo">loopstudios</div>
       <nav className="footer-nav">
         <ul>
@@ -17,6 +18,7 @@ const Footer = () => {
           <li><a href="#">Support</a></li>
         </ul>
       </nav>
+      </div>
       <div className="footer-right">
         <ul className="social-icons">
           <li><a href="#"><img src={FacebookIcon} alt="Facebook" /></a></li>
@@ -24,8 +26,8 @@ const Footer = () => {
           <li><a href="#"><img src={PinterestIcon} alt="Pinterest" /></a></li>
           <li><a href="#"><img src={InstagramIcon} alt="Instagram" /></a></li>
         </ul>
+        <p className="footer-bottom"> &copy; 2023 Loopstudios. All rights reserved.</p>
       </div>
-      <p className="footer-bottom"> &copy; 2023 Loopstudios. All rights reserved.</p>
     </footer>
   )
 }
