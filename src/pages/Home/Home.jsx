@@ -1,14 +1,18 @@
-import './home.scss'
-import OurCreationsGalery from '../../components/OurCreationGalery/OurCreationsGalery'
+import "./home.scss";
+import OurCreationsGalery from "../../components/OurCreationGalery/OurCreationsGalery";
+import SectionPrimary from "../../components/main/SectionPrimary/SectionPrimary";
+import SectionSecondary from "../../components/main/SectionSecondary/SectionSecondary";
 
 const Home = () => {
-    return (
-         <> 
-              <main>
-                <OurCreationsGalery/>
-              </main>
-         </>
-    );
+	return (
+		<>
+			<main>
+				<SectionPrimary />
+				<SectionSecondary />
+				<OurCreationsGalery />
+			</main>
+		</>
+	);
 };
 
 export default Home;
