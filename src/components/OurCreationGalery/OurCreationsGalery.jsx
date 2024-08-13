@@ -1,4 +1,4 @@
-import './OurCreationsGalet.scss'
+import './OurCreationsGalery.scss'
 const OurCreationsGalery = () => {
     return (
         <section className='oc-galery'>
@@ -72,7 +72,7 @@ const OurCreationsGalery = () => {
                     </a>
 
                 </div>
-                <a href="">See All</a>
+                <a className='oc-galery__seeAll' href="">See All</a>
             </div>
 
         </section>

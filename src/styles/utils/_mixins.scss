@@ -1,29 +1,98 @@
-@mixin hover-effect($hover-color,$max-width: 100%) {
-    position: relative;
-    overflow: hidden;
-    transition:color 0.1s ease;
+@import './var';
+
+@mixin hover-effect($hover-color, $max-width: 100%) {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.1s ease;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0%;
+    height: 1px;
+    background-color: $hover-color;
+    transition: width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+    transform-origin: center center;
+
+  }
+
+  &:hover {
+    color: $hover-color;
 
     &::after {
-      content: '';
-      position: absolute;
+      width: $max-width ;
       left: 50%;
-      bottom: -4px;
-      width: 0%;
-      height: 1px;
-      background-color: $hover-color;
-      transition:width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      transform: translateX(-50%);
-      transform-origin: center center;
-
     }
-    &:hover {
-      color: $hover-color;
 
-      &::after {
-        width: $max-width ;
-        left: 50%;
-      }
-  
-      
-    }
+
   }
+}
+
+
+@mixin cards-hover-effect($hover-color:#f3f3f3cb, $max-width: 100%) {
+  position: relative;
+  overflow: hidden;
+  transition: color 0.1s ease, filter 0.1s ease ;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $hover-color;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+    
+
+  }
+
+  &:hover {
+    color: $primary-color;
+
+    &::after {
+      backdrop-filter: blur(2px);
+      opacity: 1;
+
+    }
+
+
+  }
+}
+
+
+
+
+
+@mixin paddings ($proporcion) {
+  padding: $proporcion * 0.4px $proporcion * 4px;
+}
+
+
+@mixin paddings-bottom-top ($proporcion:$padding-main) {
+  padding-bottom: $proporcion + 3.5em;
+  padding-top: $proporcion + 0.5em;
+}
+
+@mixin buttons($proporcion, $background-color: $-white, $font-color: $primary-color) {
+  @include paddings($proporcion);
+  background-color: $background-color;
+  color: $font-color;
+  border: 1.8px solid $-very-Dark-Gray;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  height: fit-content;
+
+  width: fit-content;
+
+  &:hover {
+    background-color: $font-color;
+    color: $background-color;
+    border: 1.8px solid $font-color;
+  }
+}
