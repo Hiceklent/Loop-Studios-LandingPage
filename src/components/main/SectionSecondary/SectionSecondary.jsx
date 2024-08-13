@@ -1,17 +1,25 @@
 import React from 'react';
 import './SectionSecondary.scss';
+import Imagen2 from '../../../assets/images/desktop/image-interactive.jpg'
+import ImagenMobile from  '../../../assets/images/mobile/image-interactive.jpg'
 
-
-const SectionSecondary = ({ imageSrc, altText, title, description }) => {
+const SectionSecondary = () => {
     return (
 
         <section className="section-image-text">
-            <img src={imageSrc} alt={altText} className="section-image" />
+           
+            <picture>                      
+                <source media="(min-width: 768px)" srcset={Imagen2} />
+                <img className="section-image" src={ImagenMobile} alt="INTERACTIVE" />
+            </picture>
             <div className="section-text">
-                <h2>{title}</h2>
-                <p>{description}</p>
+                <h2>THE LEADER IN INTERACTIVE VR</h2>
+                <p> Lorem ipsum dolor sit amet consectetur adipiscing elit,  tortor imperdiet tempor vestibulum convallis cursus curabitur scelerisque,
+                    dis fringilla augue risus senectus non
+                </p>
             </div>
-        </section>
+
+        </section >
 
     );
 };
