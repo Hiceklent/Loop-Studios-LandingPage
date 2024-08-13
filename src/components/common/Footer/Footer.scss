@@ -17,7 +17,6 @@ footer {
 
     .logo {
       font-size: 34px;
-      font-weight: bold;
       color: $-white;
       margin-right: 20px;
     }
@@ -41,9 +40,9 @@ footer {
           a {
             text-decoration: none;
             color: $-white;
-            font-size: 14px;
+            
             transition: color 0.3s;
-            @include hover-effect($-white);
+            @include hover-effect($-white,80%);
 
           }
         }
@@ -71,13 +70,14 @@ footer {
 
       a {
         display: inline-block;
+        @include hover-effect($-white);
 
         img {
           width: 24px;
           height: 24px;
           transition: filter 0.3s;
 
-          @include hover-effect($-white);
+          
         }
       }
     }
